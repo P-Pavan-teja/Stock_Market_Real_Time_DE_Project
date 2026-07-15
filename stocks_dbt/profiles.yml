@@ -1,0 +1,10 @@
+stocks_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: SYSADMIN
+      warehouse: COMPUTE_WH
+      database: STOCKS_MDS
+      schema: PUBLIC
+      threads: 8
