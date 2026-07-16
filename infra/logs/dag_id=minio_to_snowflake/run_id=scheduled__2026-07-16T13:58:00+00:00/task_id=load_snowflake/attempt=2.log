@@ -1,0 +1,108 @@
+[2026-07-16T14:59:27.671+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-16T14:59:27.685+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: minio_to_snowflake.load_snowflake scheduled__2026-07-16T13:58:00+00:00 [queued]>
+[2026-07-16T14:59:27.689+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: minio_to_snowflake.load_snowflake scheduled__2026-07-16T13:58:00+00:00 [queued]>
+[2026-07-16T14:59:27.690+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2026-07-16T14:59:27.696+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_snowflake> on 2026-07-16 13:58:00+00:00
+[2026-07-16T14:59:27.703+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=67633) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-16T14:59:27.702+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'minio_to_snowflake', 'load_snowflake', 'scheduled__2026-07-16T13:58:00+00:00', '--job-id', '419', '--raw', '--subdir', 'DAGS_FOLDER/minio_to_snowflake.py', '--cfg-path', '/tmp/tmpmdpu4gnu']
+[2026-07-16T14:59:27.704+0000] {standard_task_runner.py:91} INFO - Job 419: Subtask load_snowflake
+[2026-07-16T14:59:27.703+0000] {standard_task_runner.py:64} INFO - Started process 67647 to run task
+[2026-07-16T14:59:27.730+0000] {task_command.py:426} INFO - Running <TaskInstance: minio_to_snowflake.load_snowflake scheduled__2026-07-16T13:58:00+00:00 [running]> on host 1b3af0dde868
+[2026-07-16T14:59:27.774+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='minio_to_snowflake' AIRFLOW_CTX_TASK_ID='load_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-07-16T13:58:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-07-16T13:58:00+00:00'
+[2026-07-16T14:59:27.775+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-16T14:59:27.829+0000] {connection.py:408} INFO - Snowflake Connector for Python Version: 3.11.0, Python Version: 3.12.4, Platform: Linux-6.12.76-linuxkit-aarch64-with-glibc2.36
+[2026-07-16T14:59:27.830+0000] {connection.py:1258} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2026-07-16T14:59:29.522+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1783903075.json to Snowflake stage
+[2026-07-16T14:59:30.301+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1783903082.json to Snowflake stage
+[2026-07-16T14:59:30.751+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067253.json to Snowflake stage
+[2026-07-16T14:59:31.222+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067260.json to Snowflake stage
+[2026-07-16T14:59:31.679+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067267.json to Snowflake stage
+[2026-07-16T14:59:32.165+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067274.json to Snowflake stage
+[2026-07-16T14:59:32.483+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067281.json to Snowflake stage
+[2026-07-16T14:59:32.985+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067287.json to Snowflake stage
+[2026-07-16T14:59:33.328+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067294.json to Snowflake stage
+[2026-07-16T14:59:33.674+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067301.json to Snowflake stage
+[2026-07-16T14:59:34.004+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067308.json to Snowflake stage
+[2026-07-16T14:59:34.314+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067316.json to Snowflake stage
+[2026-07-16T14:59:34.620+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067323.json to Snowflake stage
+[2026-07-16T14:59:35.235+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067330.json to Snowflake stage
+[2026-07-16T14:59:35.545+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067336.json to Snowflake stage
+[2026-07-16T14:59:35.869+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067343.json to Snowflake stage
+[2026-07-16T14:59:36.228+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067350.json to Snowflake stage
+[2026-07-16T14:59:36.655+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067952.json to Snowflake stage
+[2026-07-16T14:59:36.989+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067959.json to Snowflake stage
+[2026-07-16T14:59:37.306+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067966.json to Snowflake stage
+[2026-07-16T14:59:37.644+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067972.json to Snowflake stage
+[2026-07-16T14:59:37.963+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067979.json to Snowflake stage
+[2026-07-16T14:59:38.269+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067986.json to Snowflake stage
+[2026-07-16T14:59:38.599+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067993.json to Snowflake stage
+[2026-07-16T14:59:38.930+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068000.json to Snowflake stage
+[2026-07-16T14:59:39.304+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068007.json to Snowflake stage
+[2026-07-16T14:59:39.629+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068014.json to Snowflake stage
+[2026-07-16T14:59:40.067+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068021.json to Snowflake stage
+[2026-07-16T14:59:40.364+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068028.json to Snowflake stage
+[2026-07-16T14:59:40.688+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068035.json to Snowflake stage
+[2026-07-16T14:59:40.988+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068041.json to Snowflake stage
+[2026-07-16T14:59:41.393+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068048.json to Snowflake stage
+[2026-07-16T14:59:41.705+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068055.json to Snowflake stage
+[2026-07-16T14:59:42.024+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068062.json to Snowflake stage
+[2026-07-16T14:59:42.323+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068069.json to Snowflake stage
+[2026-07-16T14:59:42.629+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068076.json to Snowflake stage
+[2026-07-16T14:59:43.066+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068083.json to Snowflake stage
+[2026-07-16T14:59:43.416+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068090.json to Snowflake stage
+[2026-07-16T14:59:43.732+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068097.json to Snowflake stage
+[2026-07-16T14:59:44.041+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068104.json to Snowflake stage
+[2026-07-16T14:59:45.204+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))': /?accelerate
+[2026-07-16T14:59:45.824+0000] {file_transfer_agent.py:606} ERROR - An exception was raised in <bound method SnowflakeStorageClient.prepare_upload of <snowflake.connector.s3_storage_client.SnowflakeS3RestClient object at 0xffff874ca8a0>>
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/file_transfer_agent.py", line 603, in function_and_callback_wrapper
+    work(*args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/storage_client.py", line 223, in prepare_upload
+    self.preprocess()
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/storage_client.py", line 189, in preprocess
+    file_header = self.get_file_header(
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/s3_storage_client.py", line 416, in get_file_header
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/vendored/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+snowflake.connector.vendored.requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://sfc-prod3-ds1-189-customer-stage.s3.amazonaws.com/xogl1000-s/tables/11138031317651642/1784068111.json.gz
+[2026-07-16T14:59:45.829+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-16T14:59:45.829+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/minio_to_snowflake.py", line 73, in load_to_snowflake
+    cur.execute(f"PUT file://{f} @%bronze_stock_quotes_raw")
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/cursor.py", line 1047, in execute
+    data = sf_file_transfer_agent.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/file_transfer_agent.py", line 740, in result
+    Error.errorhandler_wrapper(
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 290, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 345, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 221, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.OperationalError: 253003: 253003: While putting file(s) there was an error: 'HTTPError('403 Client Error: Forbidden for url: https://sfc-prod3-ds1-189-customer-stage.s3.amazonaws.com/xogl1000-s/tables/11138031317651642/1784068111.json.gz')', this might be caused by your access to the blob storage provider, or by Snowflake.
+[2026-07-16T14:59:45.837+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=minio_to_snowflake, task_id=load_snowflake, run_id=scheduled__2026-07-16T13:58:00+00:00, execution_date=20260716T135800, start_date=20260716T145927, end_date=20260716T145945
+[2026-07-16T14:59:45.846+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 419 for task load_snowflake (253003: 253003: While putting file(s) there was an error: 'HTTPError('403 Client Error: Forbidden for url: https://sfc-prod3-ds1-189-customer-stage.s3.amazonaws.com/xogl1000-s/tables/11138031317651642/1784068111.json.gz')', this might be caused by your access to the blob storage provider, or by Snowflake.; 67647)
+[2026-07-16T14:59:45.866+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-07-16T14:59:45.881+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-16T14:59:45.881+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

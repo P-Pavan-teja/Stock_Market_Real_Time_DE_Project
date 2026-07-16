@@ -1,0 +1,119 @@
+[2026-07-15T04:13:39.154+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-15T04:13:39.171+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: minio_to_snowflake.load_snowflake manual__2026-07-15T03:37:40+00:00 [queued]>
+[2026-07-15T04:13:39.175+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: minio_to_snowflake.load_snowflake manual__2026-07-15T03:37:40+00:00 [queued]>
+[2026-07-15T04:13:39.175+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-07-15T04:13:39.182+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_snowflake> on 2026-07-15 03:37:40+00:00
+[2026-07-15T04:13:39.186+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'minio_to_snowflake', 'load_snowflake', 'manual__2026-07-15T03:37:40+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/minio_to_snowflake.py', '--cfg-path', '/tmp/tmpv4vur98k']
+[2026-07-15T04:13:39.188+0000] {standard_task_runner.py:91} INFO - Job 61: Subtask load_snowflake
+[2026-07-15T04:13:39.187+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=64) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-15T04:13:39.189+0000] {standard_task_runner.py:64} INFO - Started process 79 to run task
+[2026-07-15T04:13:39.215+0000] {task_command.py:426} INFO - Running <TaskInstance: minio_to_snowflake.load_snowflake manual__2026-07-15T03:37:40+00:00 [running]> on host 1b3af0dde868
+[2026-07-15T04:13:39.264+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='minio_to_snowflake' AIRFLOW_CTX_TASK_ID='load_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-07-15T03:37:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-15T03:37:40+00:00'
+[2026-07-15T04:13:39.265+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-15T04:13:39.319+0000] {connection.py:408} INFO - Snowflake Connector for Python Version: 3.11.0, Python Version: 3.12.4, Platform: Linux-6.12.76-linuxkit-aarch64-with-glibc2.36
+[2026-07-15T04:13:39.320+0000] {connection.py:1258} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2026-07-15T04:13:39.366+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<snowflake.connector.vendored.urllib3.connection.HTTPSConnection object at 0xffff5e3ba960>: Failed to establish a new connection: [Errno -2] Name or service not known')': /session/v1/login-request?request_id=37b96f56-fbd4-4048-9c08-baeb9183dacd&databaseName=STOCKS_MDS&schemaName=COMMON&warehouse=COMPUTE_WH&request_guid=21f073e2-cb0d-45c1-9bf4-ae8b24f560d0
+[2026-07-15T04:13:40.422+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<snowflake.connector.vendored.urllib3.connection.HTTPSConnection object at 0xffff860bb9e0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /session/v1/login-request?request_id=20f0986e-5db4-41cd-9401-3d3d2e45e165&databaseName=STOCKS_MDS&schemaName=COMMON&warehouse=COMPUTE_WH&request_guid=a6927ca8-b27f-4e68-b7d4-44abd1e07a11
+[2026-07-15T04:13:42.475+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<snowflake.connector.vendored.urllib3.connection.HTTPSConnection object at 0xffff86110170>: Failed to establish a new connection: [Errno -2] Name or service not known')': /session/v1/login-request?request_id=9077ec5c-71ba-45ee-8eed-a7ff76237dd9&databaseName=STOCKS_MDS&schemaName=COMMON&warehouse=COMPUTE_WH&request_guid=f78a74a5-39e2-4090-91c3-732d35cadac2
+[2026-07-15T04:13:44.530+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<snowflake.connector.vendored.urllib3.connection.HTTPSConnection object at 0xffff861108f0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /session/v1/login-request?request_id=a4f41f65-8932-4076-a7fc-19123fb425fe&databaseName=STOCKS_MDS&schemaName=COMMON&warehouse=COMPUTE_WH&request_guid=e6e1ad4d-c576-4d19-bcc4-237b828afd33
+[2026-07-15T04:13:46.586+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<snowflake.connector.vendored.urllib3.connection.HTTPSConnection object at 0xffff861caab0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /session/v1/login-request?request_id=9e741419-aac4-4b1c-8bbc-3fff1988ba9e&databaseName=STOCKS_MDS&schemaName=COMMON&warehouse=COMPUTE_WH&request_guid=b18e4e5a-c658-4e13-9e0d-a37841b66f7d
+[2026-07-15T04:13:50.637+0000] {connectionpool.py:824} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<snowflake.connector.vendored.urllib3.connection.HTTPSConnection object at 0xffff86111310>: Failed to establish a new connection: [Errno -2] Name or service not known')': /session/v1/login-request?request_id=0389d4b1-cf5b-457c-ba1f-543bab710734&databaseName=STOCKS_MDS&schemaName=COMMON&warehouse=COMPUTE_WH&request_guid=7057b27c-e8ec-4078-b362-498b0bdf20a8
+[2026-07-15T04:13:59.377+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1783903075.json to Snowflake stage
+[2026-07-15T04:13:59.742+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1783903082.json to Snowflake stage
+[2026-07-15T04:14:00.097+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067253.json to Snowflake stage
+[2026-07-15T04:14:00.494+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067260.json to Snowflake stage
+[2026-07-15T04:14:00.903+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067267.json to Snowflake stage
+[2026-07-15T04:14:01.302+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067274.json to Snowflake stage
+[2026-07-15T04:14:01.786+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067281.json to Snowflake stage
+[2026-07-15T04:14:02.290+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067287.json to Snowflake stage
+[2026-07-15T04:14:02.714+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067294.json to Snowflake stage
+[2026-07-15T04:14:03.104+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067301.json to Snowflake stage
+[2026-07-15T04:14:03.534+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067308.json to Snowflake stage
+[2026-07-15T04:14:03.855+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067316.json to Snowflake stage
+[2026-07-15T04:14:04.223+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067323.json to Snowflake stage
+[2026-07-15T04:14:04.661+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067330.json to Snowflake stage
+[2026-07-15T04:14:05.055+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067336.json to Snowflake stage
+[2026-07-15T04:14:05.493+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067343.json to Snowflake stage
+[2026-07-15T04:14:05.861+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067350.json to Snowflake stage
+[2026-07-15T04:14:06.191+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067952.json to Snowflake stage
+[2026-07-15T04:14:06.617+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067959.json to Snowflake stage
+[2026-07-15T04:14:06.961+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067966.json to Snowflake stage
+[2026-07-15T04:14:07.280+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067972.json to Snowflake stage
+[2026-07-15T04:14:07.572+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067979.json to Snowflake stage
+[2026-07-15T04:14:07.928+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067986.json to Snowflake stage
+[2026-07-15T04:14:08.230+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784067993.json to Snowflake stage
+[2026-07-15T04:14:08.573+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068000.json to Snowflake stage
+[2026-07-15T04:14:08.881+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068007.json to Snowflake stage
+[2026-07-15T04:14:09.214+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068014.json to Snowflake stage
+[2026-07-15T04:14:09.535+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068021.json to Snowflake stage
+[2026-07-15T04:14:09.841+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068028.json to Snowflake stage
+[2026-07-15T04:14:10.159+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068035.json to Snowflake stage
+[2026-07-15T04:14:10.545+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068041.json to Snowflake stage
+[2026-07-15T04:14:10.890+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068048.json to Snowflake stage
+[2026-07-15T04:14:11.335+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068055.json to Snowflake stage
+[2026-07-15T04:14:11.917+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068062.json to Snowflake stage
+[2026-07-15T04:14:12.484+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068069.json to Snowflake stage
+[2026-07-15T04:14:12.990+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068076.json to Snowflake stage
+[2026-07-15T04:14:13.501+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068083.json to Snowflake stage
+[2026-07-15T04:14:14.188+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068090.json to Snowflake stage
+[2026-07-15T04:14:14.695+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068097.json to Snowflake stage
+[2026-07-15T04:14:15.152+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068104.json to Snowflake stage
+[2026-07-15T04:14:15.554+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068111.json to Snowflake stage
+[2026-07-15T04:14:16.052+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068118.json to Snowflake stage
+[2026-07-15T04:14:16.567+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068124.json to Snowflake stage
+[2026-07-15T04:14:16.958+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068131.json to Snowflake stage
+[2026-07-15T04:14:17.361+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068138.json to Snowflake stage
+[2026-07-15T04:14:17.775+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068145.json to Snowflake stage
+[2026-07-15T04:14:18.274+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068152.json to Snowflake stage
+[2026-07-15T04:14:18.663+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068159.json to Snowflake stage
+[2026-07-15T04:14:19.152+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068166.json to Snowflake stage
+[2026-07-15T04:14:19.687+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068173.json to Snowflake stage
+[2026-07-15T04:14:20.924+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068180.json to Snowflake stage
+[2026-07-15T04:14:21.456+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068187.json to Snowflake stage
+[2026-07-15T04:14:21.909+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068194.json to Snowflake stage
+[2026-07-15T04:14:22.242+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068200.json to Snowflake stage
+[2026-07-15T04:14:22.616+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068207.json to Snowflake stage
+[2026-07-15T04:14:22.915+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068214.json to Snowflake stage
+[2026-07-15T04:14:23.226+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068221.json to Snowflake stage
+[2026-07-15T04:14:23.550+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068228.json to Snowflake stage
+[2026-07-15T04:14:23.867+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068235.json to Snowflake stage
+[2026-07-15T04:14:24.228+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068242.json to Snowflake stage
+[2026-07-15T04:14:24.562+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068249.json to Snowflake stage
+[2026-07-15T04:14:24.884+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068256.json to Snowflake stage
+[2026-07-15T04:14:25.208+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068263.json to Snowflake stage
+[2026-07-15T04:14:25.534+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/1784068270.json to Snowflake stage
+[2026-07-15T04:14:28.945+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-15T04:14:28.951+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/minio_to_snowflake.py", line 73, in load_to_snowflake
+    cur.execute(f"PUT file://{f} @%bronze_stock_quotes_raw")
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/cursor.py", line 1080, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 290, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 345, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 221, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 000612 (02000): None: Result not found
+[2026-07-15T04:14:28.977+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=minio_to_snowflake, task_id=load_snowflake, run_id=manual__2026-07-15T03:37:40+00:00, execution_date=20260715T033740, start_date=20260715T041339, end_date=20260715T041428
+[2026-07-15T04:14:28.993+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 61 for task load_snowflake (000612 (02000): None: Result not found; 79)
+[2026-07-15T04:14:29.045+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-07-15T04:14:29.074+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-15T04:14:29.075+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
